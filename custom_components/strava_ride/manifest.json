@@ -2,7 +2,7 @@
   "domain": "strava_ride",
   "name": "Strava Ride",
   "config_flow": true,
-  "documentation": "https://github.com/tonymyatt/homeassistant-custom-components",
+  "documentation": "https://github.com/tonymyatt/strava_ride",
   "requirements": [],
   "ssdp": [],
   "zeroconf": [],
