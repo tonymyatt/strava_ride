@@ -1,0 +1,18 @@
+{
+  "domain": "strava_ride",
+  "name": "Strava Ride",
+  "config_flow": true,
+  "documentation": "https://github.com/tonymyatt/homeassistant-custom-components",
+  "requirements": [],
+  "ssdp": [],
+  "zeroconf": [],
+  "homekit": {},
+  "dependencies": [
+    "http"
+  ],
+  "codeowners": [
+    "@tonymyatt"
+  ],
+  "iot_class": "cloud_polling",
+  "version": "0.0.2"
+}
