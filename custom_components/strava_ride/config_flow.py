@@ -1,15 +1,17 @@
 """Config flow for Strava."""
+
 from __future__ import annotations
 
 import logging
 from typing import Any
+
 import voluptuous as vol
 
 from homeassistant import config_entries
 from homeassistant.const import CONF_CLIENT_ID, CONF_CLIENT_SECRET
-from homeassistant.helpers import config_entry_oauth2_flow
-from homeassistant.helpers.network import get_url, NoURLAvailableError
 from homeassistant.data_entry_flow import FlowResult
+from homeassistant.helpers import config_entry_oauth2_flow
+from homeassistant.helpers.network import NoURLAvailableError, get_url
 
 from .const import DOMAIN, OAUTH2_AUTHORIZE, OAUTH2_TOKEN
 
@@ -24,7 +26,7 @@ class ConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
     ) -> FlowResult:
-
+        """Config flow for integration."""
         return self.async_create_entry(
             title="Strava Integration", data={"Source": "Strava"}
         )
@@ -52,7 +54,7 @@ class OAuth2FlowHandler(
         }
 
     async def async_step_get_oauth_info(self, user_input=None):
-        """Ask user to provide Strava API Credentials"""
+        """Ask user to provide Strava API Credentials."""
         data_schema = {
             vol.Required(CONF_CLIENT_ID): str,
             vol.Required(CONF_CLIENT_SECRET): str,
@@ -88,6 +90,7 @@ class OAuth2FlowHandler(
         )
 
     async def async_oauth_create_entry(self, data: dict) -> dict:
+        """Create a configuration entry based on the flow / user input."""
         data[CONF_CLIENT_ID] = self.flow_impl.client_id
         data[CONF_CLIENT_SECRET] = self.flow_impl.client_secret
 
