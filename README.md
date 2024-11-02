@@ -6,7 +6,7 @@
 
 ![Project Maintenance][maintenance-shield]
 
-_Integration to integrate with [integration_blueprint][integration_blueprint]._
+_Integration to integrate with [strava_ride][strava_ride]._
 
 **This integration will set up the following platforms.**
 
@@ -32,7 +32,7 @@ Platform | Description
 
 ***
 
-[integration_blueprint]: https://github.com/tonymyatt/strava_ride
+[strava_ride]: https://github.com/tonymyatt/strava_ride
 [commits-shield]: https://img.shields.io/github/commit-activity/y/tonymyatt/strava_ride.svg?plastic
 [commits]: https://github.com/tonymyatt/strava_ride/commits/main
 [license-shield]: https://img.shields.io/github/license/tonymyatt/strava_ride.svg?plastic
