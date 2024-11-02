@@ -1,4 +1,4 @@
-# Integration Blueprint
+# Strava Ride
 
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
@@ -12,9 +12,9 @@ _Integration to integrate with [integration_blueprint][integration_blueprint]._
 
 Platform | Description
 -- | --
-`binary_sensor` | Show something `True` or `False`.
-`sensor` | Show info from blueprint API.
-`switch` | Switch something `True` or `False`.
+`sensor` | Sensors showing weekly statistics and bike servicing durations and kilometers.
+`button` | Provides ability to reset servicing durations for bikes to current date time.
+`datetime` | Access to bike last serviced date and time.
 
 ## Installation
 
@@ -29,10 +29,6 @@ Platform | Description
 ## Configuration is done in the UI
 
 <!---->
-
-## Contributions are welcome!
-
-If you want to contribute to this please read the [Contribution guidelines](CONTRIBUTING.md)
 
 ***
 
