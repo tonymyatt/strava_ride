@@ -19,7 +19,7 @@ repository](https://hacs.xyz/docs/faq/custom_repositories) and then the integrat
 ## Configuration
 
 ### Remote Access to your Home Assistant
-To use the Strava Ride integration, your Home Assistant must be accessible from an External URL (i.e. Remote Access). Without remote access, the integration won't be able to authenicate with Strava. To learn how to set up Remote Access for Home Assistant, please visit the Official Documentation. Two popular options are: 
+To use the Strava Ride integration, your Home Assistant must be accessible from an External URL (i.e. Remote Access), allowing authentication with Strava. To learn how to set up Remote Access for Home Assistant, please visit the Official Documentation. Two popular options are: 
 - Nabu Casa. You can find this under Configuration -> "Home Assistant Cloud".
 - Cloudflare. I use [addon-cloudflared](https://github.com/brenner-tobias/addon-cloudflared) by [@brenner-tobias](https://github.com/brenner-tobias).
 
