@@ -3,7 +3,7 @@
 [![version](https://img.shields.io/github/manifest-json/v/tonymyatt/strava_ride?filename=custom_components%2Fstrava_ride%2Fmanifest.json&label=latest&plastic)](https://github.com/tonymyatt/strava_ride/releases/latest)
 [![GitHub Activity][commits-shield]][commits]
 [![License][license-shield]](LICENSE)
-[![Project Maintenance][maintenance-shield]
+![Project Maintenance][maintenance-shield]
 
 _Integration to integrate with [strava_ride][strava_ride]._
 
