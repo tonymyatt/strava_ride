@@ -1,5 +1,7 @@
 # Strava Ride
 
+[![version](https://img.shields.io/github/manifest-json/v/tonymyatt/strava_ride?filename=custom_components%2Fstrava_ride%2Fmanifest.json&label=latest&plastic)](https://github.com/tonymyatt/strava_ride/releases/latest)
+![GitHub all releases](https://img.shields.io/github/downloads/tonymyatt/strava_ride/total)
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
 [![License][license-shield]](LICENSE)
