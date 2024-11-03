@@ -1,6 +1,6 @@
 # Strava Ride
 
-[![version](https://img.shields.io/github/manifest-json/v/tonymyatt/strava_ride?filename=custom_components%2Fstrava_ride%2Fmanifest.json&label=latest&plastic)](https://github.com/tonymyatt/strava_ride/releases/latest)
+[![version](https://img.shields.io/github/manifest-json/v/tonymyatt/strava_ride?filename=custom_components%2Fstrava_ride%2Fmanifest.json&label=latest&color=slateblue)](https://github.com/tonymyatt/strava_ride/releases/latest)
 [![GitHub Activity][commits-shield]][commits]
 [![License][license-shield]](LICENSE)
 ![Project Maintenance][maintenance-shield]
