@@ -23,11 +23,11 @@ To use the Strava Ride integration, your Home Assistant must be accessible from 
 - Nabu Casa. You can find this under Configuration -> "Home Assistant Cloud"
 - Cloudflare. I use [addon-cloudflared](https://github.com/brenner-tobias/addon-cloudflared) by [@brenner-tobias](https://github.com/brenner-tobias).
 
-2. Obtain your Strava API credentials
+### Obtain your Strava API credentials
 Open your Strava Profile and go to Settings > My API Application.
 - Follow the steps in the configuration wizard, and obtain your Strava API credentials (ID + secret).
 
-3. Add the integration to home assistant
+### Add the integration to home assistant
 Go to Settings / Devices & Services and press the Add Integration button, or click the shortcut button below (requires My Homeassistant configured).
 During the setup, use your ID and secret from step 2
 [![Add Integration to your Home Assistant
