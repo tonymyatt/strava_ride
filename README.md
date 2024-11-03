@@ -7,7 +7,6 @@
 
 _Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
 
-[!Statistics Sensors](/image/statistics-sensors.png)
 <img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-bike-example.PNG"><img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-sensors.PNG">
 
 ## Installation
