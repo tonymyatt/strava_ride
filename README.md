@@ -15,8 +15,6 @@ _Integration to integrate with [Strava][strava_ride], for ride statistics and bi
 ## Configuration
 <a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=strava_ride" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
 
-<!---->
-
 ***
 
 [strava_ride]: https://www.strava.com/login
