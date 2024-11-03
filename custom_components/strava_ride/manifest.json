@@ -3,6 +3,7 @@
   "name": "Strava Ride",
   "config_flow": true,
   "documentation": "https://github.com/tonymyatt/strava_ride",
+  "issue_tracker": "https://github.com/tonymyatt/strava_ride/issues",
   "requirements": [],
   "ssdp": [],
   "zeroconf": [],
