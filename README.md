@@ -5,7 +5,7 @@
 [![License][license-shield]](LICENSE)
 ![Project Maintenance][maintenance-shield]
 
-_Integration to integrate with [strava_ride][strava_ride]._
+_Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
 
 **This integration will set up the following platforms.**
 
