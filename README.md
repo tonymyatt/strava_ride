@@ -31,7 +31,7 @@ Platform | Description
 
 ***
 
-[strava_ride]: https://github.com/tonymyatt/strava_ride
+[strava_ride]: https://www.strava.com/login
 [commits-shield]: https://img.shields.io/github/commit-activity/y/tonymyatt/strava_ride.svg?plastic
 [commits]: https://github.com/tonymyatt/strava_ride/commits/main
 [license-shield]: https://img.shields.io/github/license/tonymyatt/strava_ride.svg?plastic
