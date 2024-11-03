@@ -25,7 +25,14 @@ To use the Strava Ride integration, your Home Assistant must be accessible from 
 
 ### Obtain your Strava API credentials
 Open your Strava Profile and go to Settings > My API Application.
-- Follow the steps in the configuration wizard, and obtain your Strava API credentials (ID + secret).
+- Follow the steps in the configuration wizard, and obtain your Strava API credentials. Use the following when prompted:
+-- Application Name: *Any name you like*
+-- Category: *Any category you like*
+-- Club: *Blank or any you like*
+-- Website: *Blank or any you like*
+-- Application Description: *Blank or any you like*
+-- Authorisation Callback Domain: my.home-assistant.io
+- You will need both Client ID + Client Secret in the next step.
 
 ### Add the integration to home assistant
 Go to Settings / Devices & Services and press the Add Integration button, or click the shortcut button below (requires My Homeassistant configured).
