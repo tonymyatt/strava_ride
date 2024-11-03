@@ -7,25 +7,13 @@
 
 _Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
 
-**This integration will set up the following platforms.**
-
-Platform | Description
--- | --
-`sensor` | Sensors showing weekly statistics and bike servicing durations and kilometers.
-`button` | Provides ability to reset servicing durations for bikes to current date time.
-`datetime` | Access to bike last serviced date and time.
-
 ## Installation
 
-1. Using the tool of choice open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
-1. If you do not have a `custom_components` directory (folder) there, you need to create it.
-1. In the `custom_components` directory (folder) create a new folder called `integration_blueprint`.
-1. Download _all_ the files from the `custom_components/integration_blueprint/` directory (folder) in this repository.
-1. Place the files you downloaded in the new directory (folder) you created.
-1. Restart Home Assistant
-1. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Integration blueprint"
+### Via [HACS](https://hacs.xyz/)
+<a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=Tasshack&repository=dreame-vacuum&category=integration" target="_blank"><img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open your Home Assistant instance and open a repository inside the Home Assistant Community Store." /></a>
 
-## Configuration is done in the UI
+## Configuration
+<a href="https://my.home-assistant.io/redirect/config_flow_start/?domain=strava_ride" target="_blank"><img src="https://my.home-assistant.io/badges/config_flow_start.svg" alt="Open your Home Assistant instance and start setting up a new integration." /></a>
 
 <!---->
 
