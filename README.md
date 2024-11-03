@@ -214,8 +214,7 @@ To submit your changes please fork this repository and open a pull request.
 
 ## Thanks To
 
- - [xiaomi_vacuum](https://github.com/pooyashahidi/xiaomi_vacuum) by [@pooyashahidi](https://github.com/pooyashahidi)
-
+Forked from [ha_strava](https://github.com/craibo/ha_strava) by [@craibo](https://github.com/craibo)
 
 [strava_ride]: https://www.strava.com/login
 [commits-shield]: https://img.shields.io/github/commit-activity/y/tonymyatt/strava_ride.svg?plastic
