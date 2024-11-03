@@ -1,4 +1,4 @@
-# Strava Ride
+![image](https://github.com/user-attachments/assets/2eb2768e-d44d-4239-9f8a-002f3619c6a6)# Strava Ride
 
 [![version](https://img.shields.io/github/manifest-json/v/tonymyatt/strava_ride?filename=custom_components%2Fstrava_ride%2Fmanifest.json&label=latest&color=slateblue)](https://github.com/tonymyatt/strava_ride/releases/latest)
 [![GitHub Activity][commits-shield]][commits]
@@ -43,6 +43,160 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 ## How to Use
 
 *Coming Soon*
+
+## Example Cards
+
+### Bike Service Card
+Requires custom card (multiple-entity-row)[https://github.com/benct/lovelace-multiple-entity-row].
+
+```yaml
+type: entities
+entities:
+  - entity: sensor.bike_a_distance
+    name: Total Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_0
+    name: Chain
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_0_reset
+          confirmation:
+            text: Confirm Chain Lubed?
+      - entity: datetime.bike_a_service_gear_0_date
+        name: Last Lubed
+        format: date
+      - entity: sensor.bike_a_service_gear_0
+        name: Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_5
+    name: Wash & Polish
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_5_reset
+          confirmation:
+            text: Wash and Polish Complete?
+      - entity: datetime.bike_a_service_gear_5_date
+        name: Last Washed
+        format: date
+      - entity: sensor.bike_a_service_gear_5
+        name: Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_1
+    name: Front Tyre
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_1_reset
+          confirmation:
+            text: Confirm Front Tyre Changed?
+      - entity: datetime.bike_a_service_gear_1_date
+        name: Last Changed
+        format: date
+      - entity: sensor.bike_a_service_gear_1
+        name: Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_2
+    name: Rear Tyre
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_2_reset
+          confirmation:
+            text: Confirm Rear Tyre Changed?
+      - entity: datetime.bike_a_service_gear_2_date
+        name: Last Changed
+        format: date
+      - entity: sensor.bike_a_service_gear_2
+        name: Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_7
+    name: Bar Tape
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_7_reset
+          confirmation:
+            text: Confirm Bar Tape Changed?
+      - entity: datetime.bike_a_service_gear_7_date
+        name: Last Changed
+        format: date
+      - entity: sensor.bike_a_service_gear_7
+        name: Time
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_6
+    name: Major Service
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_6_reset
+          confirmation:
+            text: Confirm Major Service Completed?
+      - entity: datetime.bike_a_service_gear_6_date
+        name: Last Serviced
+        format: date
+      - entity: sensor.bike_a_service_gear_6
+        name: Distance
+  - type: custom:multiple-entity-row
+    entity: sensor.bike_a_service_gear_3
+    name: Shop Service
+    state_color: true
+    show_state: false
+    entities:
+      - icon: mdi:restore-alert
+        state_color: false
+        tap_action:
+          action: call-service
+          service: button.press
+          service_data:
+            entity_id: button.bike_a_service_gear_3_reset
+          confirmation:
+            text: Confirm Shop Serviced?
+      - entity: datetime.bike_a_service_gear_3_date
+        name: Last Serviced
+        format: date
+      - entity: sensor.bike_a_service_gear_3
+        name: Distance
+title: Bike A
+
+```
 
 ## To Do
 
