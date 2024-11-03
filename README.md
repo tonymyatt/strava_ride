@@ -204,9 +204,9 @@ title: Bike A
 
 ## To Do
 
-- Option to select which gear item are imported
-- Custom number of gear service/maintenance items
-- Custom names of gear service/maintenance items
+- Option to select which gear (bikes) are imported
+- Custom number of gear (bike) service/maintenance items
+- Custom names of gear (bike) service/maintenance items
 
 ## Contributing
 
