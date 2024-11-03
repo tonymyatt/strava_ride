@@ -51,7 +51,7 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 ### Bike Service Card
 Requires custom card [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row). Replace bike_a with your bike gear entity name.
 
-<img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-bike-example.png">
+<img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-bike-example.PNG">
 
 ```yaml
 type: entities
