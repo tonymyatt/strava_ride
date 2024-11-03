@@ -9,7 +9,7 @@ _Integration to integrate with [Strava][strava_ride], for ride statistics and bi
 
 ## Installation
 
-[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
 
 Installation is easiest via the [Home Assistant Community Store (HACS)](https://hacs.xyz/), which is the best place to get third-party integrations for Home Assistant. Once you have HACS set up, simply click the button below (requires My Homeassistant configured) or follow the [instructions for adding a custom
 repository](https://hacs.xyz/docs/faq/custom_repositories) and then the integration will be available to install like any other.
