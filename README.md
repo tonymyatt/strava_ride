@@ -7,6 +7,8 @@
 
 _Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
 
+<img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/statistics-sensors.png"><img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-sensors.png">
+
 ## Installation
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/integration)
@@ -47,7 +49,9 @@ instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://m
 ## Example Cards
 
 ### Bike Service Card
-Requires custom card (multiple-entity-row)[https://github.com/benct/lovelace-multiple-entity-row].
+Requires custom card [multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row). Replace bike_a with your bike gear entity name.
+
+<img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-bike-example.png">
 
 ```yaml
 type: entities
