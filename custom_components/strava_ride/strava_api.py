@@ -14,7 +14,6 @@ from homeassistant.util import dt as dt_util
 from .const import MAX_GEAR_SERVICE_ITEMS, MAX_NB_ACTIVITIES
 
 _LOGGER = logging.getLogger(__name__)
-_LOGGER.setLevel(logging.DEBUG)
 
 
 class CycleGearService:
@@ -56,8 +55,6 @@ class CycleGear:
 
     def clear_counters(self):
         """Clear all service counters."""
-        # for s in self.service:
-        #    s.clear_counters()
         for idx in range(MAX_GEAR_SERVICE_ITEMS):
             self.service[idx].clear_counters()
 
@@ -107,10 +104,6 @@ class StravaAPI:
         self, strava_id: str, service_index: int, service_date: datetime
     ):
         """Set the service date of the strava_id gear for the given service attribute."""
-        # gear_service: CycleGearService = getattr(
-        #    self._strava_ride_gear[strava_id], service_attr
-        # )
-        # )
         gear_service: CycleGearService = self._strava_ride_gear[strava_id].service[
             service_index
         ]
@@ -132,14 +125,14 @@ class StravaAPI:
         # Exit on rate limit, cannot update data
         if activities_response.status == 429:
             _LOGGER.warning(
-                "Strava API rate limit has been reached why requesting activities"
+                "Strava API rate limit has been reached why requesting activities."
             )
             return
 
         # Otherwise, existing logging message if not a good response
         if activities_response.status != 200:
             _LOGGER.error(
-                f"Could not fetch strava activities (response code: {activities_response.status}): {await activities_response.text()}"
+                f"Could not fetch strava activities (response code: {activities_response.status}): {await activities_response.text()}."
             )
             return
 
@@ -160,6 +153,10 @@ class StravaAPI:
         for a in self._strava_ride_activities:
             gear_id = a["gear_id"]
 
+            # Skip when gear no defined in strava
+            if gear_id is None:
+                continue
+
             # Check if this gear id has been found already, if not setup
             if gear_id not in self._strava_ride_gear:
                 self._strava_ride_gear[gear_id] = CycleGear()
@@ -177,14 +174,14 @@ class StravaAPI:
             # Exit on rate limit, cannot update data
             if api_response.status == 429:
                 _LOGGER.warning(
-                    f"Strava API rate limit has been reached when requesting gear {gear_id}"
+                    f"Strava API rate limit has been reached when requesting gear {gear_id}."
                 )
                 return
 
             # Otherwise, existing logging message if not a good response
             if api_response.status != 200:
                 _LOGGER.error(
-                    f"Could not fetch strava gear (response code: {api_response.status}): {await api_response.text()}"
+                    f"Could not fetch strava gear (response code: {api_response.status}): {await api_response.text()}."
                 )
                 return
 
@@ -206,6 +203,10 @@ class StravaAPI:
         # For every activity, ask the gear to process the usage
         for a in self._strava_ride_activities:
             gear_id = a["gear_id"]
+
+            # Skip when no gear defined
+            if gear_id is None:
+                continue
 
             # activity date and time
             act_date = dt_parse(a["start_date"])
