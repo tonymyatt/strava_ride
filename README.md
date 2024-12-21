@@ -5,7 +5,7 @@
 [![License][license-shield]](LICENSE)
 ![Project Maintenance][maintenance-shield]
 
-_Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
+_Home Assistant Integration to integrate with [Strava][strava_ride], for ride statistics and bike gear data to create insights for cyclists._
 
 <img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/statistics-sensors.PNG"><img src="https://raw.githubusercontent.com/tonymyatt/strava_ride/main/image/gear-sensors.PNG">
 
@@ -39,6 +39,7 @@ Open your Strava Profile and go to Settings > My API Application.
 ### Add the integration to home assistant
 Go to Settings / Devices & Services and press the Add Integration button, or click the shortcut button below (requires My Homeassistant configured).
 During the setup, use your ID and secret from the previous step.
+
 [![Add Integration to your Home Assistant
 instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=strava_ride)
 
