@@ -85,6 +85,18 @@ class CycleWeekStats:
             climb = round(self.elevation / self.distance / 10, 1)
         return climb
 
+    def calc_delta_of(self, prev: CycleWeekStats):
+        """Calculate delta to previous given distance and elevation."""
+        if prev.distance == 0:
+            self.distance_delta = None
+        else:
+            self.distance_delta = round(self.distance / prev.distance * 100, 1)
+
+        if prev.time == 0:
+            self.time_delta = None
+        else:
+            self.time_delta = round(self.time / prev.time * 100, 1)
+
 
 class StravaAPI:
     """API to read data from Strava API."""
@@ -263,27 +275,22 @@ class StravaAPI:
         mon_last_week = mon_this_week + timedelta(-7)
         mon_last_fnight = mon_last_week + timedelta(-7)
 
+        last_fnight = CycleWeekStats()
+        last_fnight.distance = weekly_data[mon_last_fnight]["distance"]
+        last_fnight.time = weekly_data[mon_last_fnight]["time"]
+        last_fnight.elevation = weekly_data[mon_last_fnight]["elevation"]
+
         last_week = CycleWeekStats()
         last_week.distance = weekly_data[mon_last_week]["distance"]
-        last_week.distance_delta = round(
-            last_week.distance / weekly_data[mon_last_fnight]["distance"] * 100, 1
-        )
         last_week.time = weekly_data[mon_last_week]["time"]
-        last_week.time_delta = round(
-            last_week.time / weekly_data[mon_last_fnight]["time"] * 100, 1
-        )
         last_week.elevation = weekly_data[mon_last_week]["elevation"]
+        last_week.calc_delta_of(last_fnight)
 
         this_week = CycleWeekStats()
         this_week.distance = weekly_data[mon_this_week]["distance"]
-        this_week.distance_delta = round(
-            this_week.distance / weekly_data[mon_last_week]["distance"] * 100, 1
-        )
         this_week.time = weekly_data[mon_this_week]["time"]
-        this_week.time_delta = round(
-            this_week.time / weekly_data[mon_last_week]["time"] * 100, 1
-        )
         this_week.elevation = weekly_data[mon_this_week]["elevation"]
+        this_week.calc_delta_of(last_week)
 
         return {"last_week": last_week, "this_week": this_week}
 
