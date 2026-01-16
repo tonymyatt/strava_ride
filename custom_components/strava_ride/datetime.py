@@ -98,12 +98,15 @@ class GearServiceDateTime(CoordinatorEntity, DateTimeEntity, RestoreEntity):
         """Handle entity which will be added."""
         await super().async_added_to_hass()
         state = await self.async_get_last_state()
-        if not state:
+        if not state or state == 'unavailable':
             return
 
         # Parse the stored date and update with the coorindator
-        prev_date = dt_parse(state.state)
+        try:
+            prev_date = dt_parse(state.state)
 
-        await self.coordinator.set_gear_service_date(
-            self.gear_strava_id, self.gear_service_index, prev_date
-        )
+            await self.coordinator.set_gear_service_date(
+                self.gear_strava_id, self.gear_service_index, prev_date
+            )
+        except:
+            return
