@@ -11,6 +11,8 @@ DOMAIN = "strava_ride"
 
 SCAN_INTERVAL = timedelta(minutes=10)
 
+STRAVA_ACTIVITY_TYPES = ["Ride", "VirtualRide"]
+
 # OAuth Specs
 OAUTH2_AUTHORIZE = "https://www.strava.com/oauth/authorize"
 OAUTH2_TOKEN = "https://www.strava.com/oauth/token"

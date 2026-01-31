@@ -11,7 +11,7 @@ from dateutil.parser import parse as dt_parse
 from homeassistant.helpers import config_entry_oauth2_flow
 from homeassistant.util import dt as dt_util
 
-from .const import MAX_GEAR_SERVICE_ITEMS, MAX_NB_ACTIVITIES
+from .const import MAX_GEAR_SERVICE_ITEMS, MAX_NB_ACTIVITIES, STRAVA_ACTIVITY_TYPES
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -157,9 +157,8 @@ class StravaAPI:
 
         # Create a list of ride activities only
         for idx, activity in enumerate(json_data):
-            if activity["type"] != "Ride":
-                continue
-            self._strava_ride_activities.append(activity)
+            if activity["type"] in STRAVA_ACTIVITY_TYPES:
+                self._strava_ride_activities.append(activity)
 
         # Make sure the gear dict contains all gear from ride activities
         for a in self._strava_ride_activities:
